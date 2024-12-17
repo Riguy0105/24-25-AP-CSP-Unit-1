@@ -87,13 +87,13 @@ while True:
     if (ball.ycor() > platform.ycor() and ball.ycor() < platform.ycor() + 10 and
         ball.xcor() > platform.xcor() - 50 and ball.xcor() < platform.xcor() + 50):
         ball.dy *= -1  # Reverse the ball's vertical direction
-        score += 10  # Increment the score
+        score += 10
         score_display.clear()  # Clear the previous score
         score_display.write(f"Score: {score}", align="center", font=("Arial", 24, "normal"))
 
     # Apply gravity to the ball (make it fall down)
     if ball.ycor() > -290:
-        ball.dy -= gravity  # Ball is falling down due to gravity
+        ball.dy -= gravity
 
     # Check if the ball falls below the platform (game over condition)
     if ball.ycor() < -290:
